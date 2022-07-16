@@ -1,8 +1,7 @@
 ## 3D Medical Image Segmentation using Parallel Transformers  
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
-![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)
-![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
+<img src="https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg" width="100px">
 
 ### Train and Test
 
