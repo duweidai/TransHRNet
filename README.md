@@ -2,7 +2,6 @@
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
 
-
 ### Train and Test
 
 We provide all code related to the network structure, and the training and testing of the model are consistent with CoTr.
