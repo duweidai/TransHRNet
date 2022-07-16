@@ -1,4 +1,5 @@
 ## 3D Medical Image Segmentation using Parallel Transformers  
+<img width="60%" height="60%">
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
 
@@ -13,7 +14,7 @@ That is to say, as long as the network structure in the CoTr project is replaced
 
 ### Performance on Multi-Atlas Labeling Beyond the Cranial Vault  dataset
 
-< img src = "[url](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)" width="30%"> 
+![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)
 
 ### Performance on Medical Segmentation Decathlon (MSD) dataset for brain tumor  
 
