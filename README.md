@@ -1,5 +1,5 @@
 ## 3D Medical Image Segmentation using Parallel Transformers  
-<img width="60%" height="60%">
+<img width="90%" height="90%">
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
 
