@@ -2,6 +2,7 @@
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)
+![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
 
 ### Train and Test
 
