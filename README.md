@@ -20,7 +20,7 @@ Torchvision 0.8.2
   cd nnUNet/nnunet/dataset_conversion 
   Run python Task017_BeyondCranialVaultAbdominalOrganSegmentation.py
   ```
-  * Training and Testing ID are in data/splits_final.pkl
+* Training and Testing ID are in data/splits_final.pkl
 
 ### 2. Training
 cd TransHRNet_package/TransHRNet/run
