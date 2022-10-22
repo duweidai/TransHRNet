@@ -28,11 +28,11 @@ cd TransHRNet_package/TransHRNet/run
 # Acknowledge 
 Part of codes are reused from the CoTr (https://github.com/YtongXie/CoTr). Thanks to Fabian Isensee for the codes of CoTr.
 
-### Performance on Multi-Atlas Labeling Beyond the Cranial Vault  dataset
+## Performance on Multi-Atlas Labeling Beyond the Cranial Vault  dataset
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)
 
-### Performance on Medical Segmentation Decathlon (MSD) dataset for brain tumor  
+## Performance on Medical Segmentation Decathlon (MSD) dataset for brain tumor  
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_2.jpg)
 
