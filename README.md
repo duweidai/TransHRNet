@@ -19,17 +19,14 @@ Torchvision 0.8.2
 
 # Training
 cd TransHRNet_package/TransHRNet/run
-* Run ``` python run_training.py -gpu='0' ``` for training.
-```
+* Run ``` python run_training.py -gpu="0" -outpath="TransHRNet" ``` for training.
 
+# Testing
+cd TransHRNet_package/TransHRNet/run
+* Run ``` python run_training.py -gpu='0' -outpath="TransHRNet" -val --val_folder='validation_result' ``` for validation.
 
-### Train and Test
-
-We provide all code related to the network structure, and the training and testing of the model are consistent with CoTr.
-
-Cotr: Efficiently bridging cnn and transformer for 3d medical image segmentation (https://github.com/YtongXie/CoTr).
-
-That is to say, as long as the network structure in the CoTr project is replaced with the code we provide, it will take effect.
+# Acknowledge 
+Part of codes are reused from the CoTr (https://github.com/YtongXie/CoTr). Thanks to Fabian Isensee for the codes of CoTr.
 
 ### Performance on Multi-Atlas Labeling Beyond the Cranial Vault  dataset
 
