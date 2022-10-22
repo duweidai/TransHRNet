@@ -15,6 +15,7 @@ Torchvision 0.8.2
 ### 1. Data Preparation
 * Download BCV dataset (https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
 * Preprocess the BCV dataset use the nnUNet package.
+
       cd nnUNet/nnunet/dataset_conversion 
       Run ```python Task017_BeyondCranialVaultAbdominalOrganSegmentation.py```
 * Training and Testing ID are in data/splits_final.pkl
