@@ -17,19 +17,19 @@ Torchvision 0.8.2
 * Preprocess the BCV dataset use the nnUNet package.
 * Training and Testing ID are in data/splits_final.pkl
 
-### Training
+### 2. Training
 cd TransHRNet_package/TransHRNet/run
 * Run ``` python run_training.py -gpu="0" -outpath="TransHRNet" ``` for training.
 
-### Testing
+### 3. Testing
 cd TransHRNet_package/TransHRNet/run
 * Run ``` python run_training.py -gpu='0' -outpath="TransHRNet" -val --val_folder='validation_result' ``` for validation.
 
-### Performance on Multi-Atlas Labeling Beyond the Cranial Vault (BCV) dataset
+### 4. Performance on Multi-Atlas Labeling Beyond the Cranial Vault (BCV) dataset
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)
 
-### Performance on Medical Segmentation Decathlon (MSD) dataset for brain tumor  
+### 5. Performance on Medical Segmentation Decathlon (MSD) dataset for brain tumor  
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_2.jpg)
 
