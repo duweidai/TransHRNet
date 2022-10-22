@@ -17,7 +17,7 @@ Torchvision 0.8.2
 * Preprocess the BCV dataset use the nnUNet package.
 
       cd nnUNet/nnunet/dataset_conversion 
-      Run ```python Task017_BeyondCranialVaultAbdominalOrganSegmentation.py```
+      Run python Task017_BeyondCranialVaultAbdominalOrganSegmentation.py
 * Training and Testing ID are in data/splits_final.pkl
 
 ### 2. Training
