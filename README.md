@@ -1,6 +1,23 @@
 ## 3D Medical Image Segmentation using Parallel Transformers  
-
+This is the official pytorch implementation of the TransHRNet
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
+
+## Requirements
+CUDA 11.O
+Python 3.7
+Pytorch 1.7
+Torchvision 0.8.2
+
+## Usage
+# 1. Data Preparation
+* Download BCV dataset (https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
+* Preprocess the BCV dataset use the nnUNet package.
+* Training and Testing ID are in data/splits_final.pkl
+
+# Training
+cd TransHRNet_package/TransHRNet/run
+* Run ``` python run_training.py -gpu='0' ``` for training.
+```
 
 
 ### Train and Test
