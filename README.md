@@ -3,9 +3,12 @@ This is the official pytorch implementation of the TransHRNet
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/network.jpg)
 
 ## Requirements
-CUDA 11.O
+CUDA 11.0
+
 Python 3.7
+
 Pytorch 1.7
+
 Torchvision 0.8.2
 
 ## Usage
