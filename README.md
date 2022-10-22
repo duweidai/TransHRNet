@@ -22,11 +22,11 @@ Torchvision 0.8.2
 
 ### 2. Training
 cd TransHRNet_package/TransHRNet/run
-* Run ``` python run_training.py -gpu="0" -outpath="TransHRNet" ``` for training.
+* Run ``` python run_training.py -gpu="0" -outpath="TransHRNet_result" ``` for training.
 
 ### 3. Testing
 cd TransHRNet_package/TransHRNet/run
-* Run ``` python run_training.py -gpu='0' -outpath="TransHRNet" -val --val_folder='validation_result' ``` for validation.
+* Run ``` python run_training.py -gpu='0' -outpath="TransHRNet_result" -val --val_folder='validation_result' ``` for validation.
 
 ### 4. Performance on Multi-Atlas Labeling Beyond the Cranial Vault (BCV) dataset
 
