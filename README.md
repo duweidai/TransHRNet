@@ -34,10 +34,6 @@ cd TransHRNet_package/TransHRNet/run
 
 ![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_1.jpg)
 
-### 5. Performance on Medical Segmentation Decathlon (MSD) dataset for brain tumor  
-
-![](https://github.com/duweidai/TransHRNet/blob/main/images/performance_2.jpg)
-
 ## Acknowledge 
 Part of codes are reused from the CoTr (https://github.com/YtongXie/CoTr). Thanks to Fabian Isensee for the codes of CoTr.
 
