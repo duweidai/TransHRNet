@@ -15,7 +15,7 @@
 from collections import OrderedDict
 from batchgenerators.augmentations.utils import random_crop_2D_image_batched, pad_nd_image
 import numpy as np
-from batchgenerators.dataloading import SlimDataLoaderBase
+from batchgenerators.dataloading.data_loader import SlimDataLoaderBase
 from multiprocessing import Pool
 
 from nnunet.configuration import default_num_threads

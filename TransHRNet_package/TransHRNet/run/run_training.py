@@ -7,7 +7,7 @@ from batchgenerators.utilities.file_and_folder_operations import *
 from TransHRNet.run.default_configuration import get_default_configuration
 from nnunet.paths import default_plans_identifier
 from nnunet.training.cascade_stuff.predict_next_stage import predict_next_stage
-from TransHRNet.training.network_training.nnUNetTrainer import nnUNetTrainer
+from TransHRNet.training.network_training import nnUNetTrainerV2_TransHRNet
 from nnunet.utilities.task_name_id_conversion import convert_id_to_task_name
 import os
 import TransHRNet
@@ -19,7 +19,7 @@ def main():
 
     parser.add_argument("-network", type=str, default='3d_fullres')
     parser.add_argument("-network_trainer", type=str, default='nnUNetTrainerV2_TransHRNet')
-    parser.add_argument("-task", type=str, default='17', help="can be task name or task id")
+    parser.add_argument("-task", type=str, default='10', help="can be task name or task id")
     parser.add_argument("-fold", type=str, default='all', help='0, 1, ..., 5 or \'all\'')
     parser.add_argument("-outpath", type=str, default='0624_pp_flops', help='output path')
     parser.add_argument("-norm_cfg", type=str, default='IN', help='BN, IN or GN')
@@ -98,11 +98,12 @@ def main():
     trainer_class = get_default_configuration(outpath, network, task, network_trainer, plans_identifier, \
                                               search_in=(TransHRNet.__path__[0], "training", "network_training"), \
                                               base_module='TransHRNet.training.network_training')
+    print(plans_file, fold, norm_cfg, activation_cfg, output_folder_name, dataset_directory, batch_dice, stage, decompress_data, deterministic,run_mixed_precision)
 
-    trainer = trainer_class(plans_file, fold, norm_cfg, activation_cfg, output_folder=output_folder_name, dataset_directory=dataset_directory,
-                            batch_dice=batch_dice, stage=stage, unpack_data=decompress_data,
-                            deterministic=deterministic,
-                            fp16=run_mixed_precision)
+    trainer = trainer_class(fold='all', plans_file="/home/undergraduate/shourya/colon/nnUNet_preprocessed/Task010_Colon/nnUNetPlansv2.1_plans_3D.pkl", 
+                            output_folder='/home/undergraduate/shourya/colon/nnUNet_trained_models', dataset_directory=dataset_directory, batch_dice=batch_dice, stage=stage, 
+                            unpack_data=decompress_data, deterministic=deterministic, fp16=run_mixed_precision)
+
 
     if args.disable_saving:   # None
         trainer.save_latest_only = False  # if false it will not store/overwrite _latest but separate files each

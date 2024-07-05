@@ -6,10 +6,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-import CNNBackbone
-from neural_network import SegmentationNetwork
-from EffTrans_Block.effTrans_block_layers import effTrans_layers
-from EffTrans_Block.position_encoding import build_position_encoding
+from .CNNBackbone import Backbone
+from .neural_network import SegmentationNetwork
+from .EffTrans_Block.effTrans_block_layers import effTrans_layers
+from .EffTrans_Block.position_encoding import build_position_encoding
 
 
 class Conv3d_wd(nn.Conv3d):
@@ -121,7 +121,7 @@ class U_ResTran3D(nn.Module):
                 if m.bias is not None:
                     nn.init.constant_(m.bias, 0)
 
-        self.backbone = CNNBackbone.Backbone(depth=9, norm_cfg=norm_cfg, weight_std=weight_std)
+        self.backbone = Backbone(depth=9, norm_cfg=norm_cfg, weight_std=weight_std)
         total = sum([param.nelement() for param in self.backbone.parameters()])
         print('  + Number of Backbone Params: %.2f(e6)' % (total / 1e6))
 

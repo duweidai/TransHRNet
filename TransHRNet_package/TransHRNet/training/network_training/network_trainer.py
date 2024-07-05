@@ -18,7 +18,7 @@ from typing import Tuple
 
 import matplotlib
 from batchgenerators.utilities.file_and_folder_operations import *
-from CoTr.network_architecture.neural_network import SegmentationNetwork
+from nnunet.network_architecture.neural_network import SegmentationNetwork
 from sklearn.model_selection import KFold
 from torch import nn
 from torch.cuda.amp import GradScaler, autocast

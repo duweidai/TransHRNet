@@ -30,9 +30,9 @@ PLEASE READ paths.md FOR INFORMATION TO HOW TO SET THIS UP
 #preprocessing_output_dir = os.environ['nnUNet_preprocessed'] if "nnUNet_preprocessed" in os.environ.keys() else None
 #network_training_output_dir_base = os.path.join(os.environ['RESULTS_FOLDER']) if "RESULTS_FOLDER" in os.environ.keys() else None
 
-base = "/data/project_ddw/YQS_idea/CoTr-main/nnU-pro/nnU_data/nnUNet_raw"
-preprocessing_output_dir = "/data/project_ddw/YQS_idea/CoTr-main/nnUNet_preprocessed"
-network_training_output_dir_base = "/data/project_ddw/YQS_idea/CoTr-main/nnUNet_trained_models"
+base = "/home/undergraduate/shourya/colon/nnUNet_raw_data_base"
+preprocessing_output_dir = "/home/undergraduate/shourya/colon/nnUNet_preprocessed"
+network_training_output_dir_base = "/home/undergraduate/shourya/colon/nnUNet_trained_models"
 
 if base is not None:
     nnUNet_raw_data = join(base, "nnUNet_raw_data")

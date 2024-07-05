@@ -147,12 +147,11 @@ def resample_data_or_seg(data, new_shape, is_seg, axis=None, order=3, do_separat
                 reshaped_data = []
                 for slice_id in range(shape[axis]):
                     if axis == 0:
-                        reshaped_data.append(resize_fn(data[c, slice_id], new_shape_2d, order, cval=cval, **kwargs))
+                        reshaped_data.append(resize_fn(data[c, slice_id], new_shape_2d, order, **kwargs))
                     elif axis == 1:
-                        reshaped_data.append(resize_fn(data[c, :, slice_id], new_shape_2d, order, cval=cval, **kwargs))
+                        reshaped_data.append(resize_fn(data[c, :, slice_id], new_shape_2d, order, **kwargs))
                     else:
-                        reshaped_data.append(resize_fn(data[c, :, :, slice_id], new_shape_2d, order, cval=cval,
-                                                       **kwargs))
+                        reshaped_data.append(resize_fn(data[c, :, :, slice_id], new_shape_2d, order, **kwargs))
                 reshaped_data = np.stack(reshaped_data, axis)
                 if shape[axis] != new_shape[axis]:
 
@@ -171,7 +170,7 @@ def resample_data_or_seg(data, new_shape, is_seg, axis=None, order=3, do_separat
 
                     coord_map = np.array([map_rows, map_cols, map_dims])
                     if not is_seg or order_z == 0:
-                        reshaped_final_data.append(map_coordinates(reshaped_data, coord_map, order=order_z, cval=cval,
+                        reshaped_final_data.append(map_coordinates(reshaped_data, coord_map, order=order_z, cval=0,
                                                                    mode='nearest')[None])
                     else:
                         unique_labels = np.unique(reshaped_data)
@@ -180,7 +179,7 @@ def resample_data_or_seg(data, new_shape, is_seg, axis=None, order=3, do_separat
                         for i, cl in enumerate(unique_labels):
                             reshaped_multihot = np.round(
                                 map_coordinates((reshaped_data == cl).astype(float), coord_map, order=order_z,
-                                                cval=cval, mode='nearest'))
+                                                cval=0, mode='nearest'))
                             reshaped[reshaped_multihot > 0.5] = cl
                         reshaped_final_data.append(reshaped[None])
                 else:
@@ -190,7 +189,7 @@ def resample_data_or_seg(data, new_shape, is_seg, axis=None, order=3, do_separat
             print("no separate z, order", order)
             reshaped = []
             for c in range(data.shape[0]):
-                reshaped.append(resize_fn(data[c], new_shape, order, cval=cval, **kwargs)[None])
+                reshaped.append(resize_fn(data[c], new_shape, order, **kwargs)[None])
             reshaped_final_data = np.vstack(reshaped)
         return reshaped_final_data.astype(dtype_data)
     else:

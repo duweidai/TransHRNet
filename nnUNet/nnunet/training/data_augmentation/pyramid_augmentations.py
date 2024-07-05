@@ -16,7 +16,7 @@ from copy import deepcopy
 from skimage.morphology import label, ball
 from skimage.morphology.binary import binary_erosion, binary_dilation, binary_closing, binary_opening
 import numpy as np
-from batchgenerators.transforms import AbstractTransform
+from batchgenerators.transforms.abstract_transforms import AbstractTransform
 
 
 class RemoveRandomConnectedComponentFromOneHotEncodingTransform(AbstractTransform):

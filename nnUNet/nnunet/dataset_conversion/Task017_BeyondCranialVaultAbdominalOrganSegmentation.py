@@ -53,11 +53,11 @@ def export_segmentations_postprocess(indir, outdir):
 
 
 if __name__ == "__main__":
-    train_dir = "/data/project_ddw/TransHRNet/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task017_BCV/RawData/Training"
-    test_dir = "/data/project_ddw/TransHRNet/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task017_BCV/RawData/Testing"
+    train_dir = "/home/undergraduate/shourya/Training-Training"
+    test_dir = "/home/undergraduate/shourya/Training-Testing"
 
 
-    output_folder = "/data/project_ddw/TransHRNet/nnU-pro/nnU_data/nnUNet_raw/nnUNet_raw_data/Task017_BCV"
+    output_folder = "/home/undergraduate/shourya/nnUNet_raw/Task017_BCV"
     img_dir = join(output_folder, "imagesTr")
     lab_dir = join(output_folder, "labelsTr")
     img_dir_te = join(output_folder, "imagesTs")

@@ -6,7 +6,7 @@ import pkgutil
 from nnunet.training.network_training.nnUNetTrainer import nnUNetTrainer
 
 
-def recursive_find_python_class(folder, trainer_name, current_module):
+def recursive_find_python_class(folder, trainer_name='nnUNetTrainerV2_3D_fullres', current_module):
     tr = None
     for importer, modname, ispkg in pkgutil.iter_modules(folder):
         # print(modname, ispkg)

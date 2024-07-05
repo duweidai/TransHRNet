@@ -15,7 +15,7 @@
 
 import torch
 from batchgenerators.augmentations.utils import convert_seg_image_to_one_hot_encoding_batched, resize_segmentation
-from batchgenerators.transforms import AbstractTransform
+from batchgenerators.transforms.abstract_transforms import AbstractTransform
 from torch.nn.functional import avg_pool2d, avg_pool3d
 import numpy as np
 
@@ -100,6 +100,6 @@ def downsample_seg_for_ds_transform2(seg, ds_scales=((1, 1, 1), (0.5, 0.5, 0.5),
             out_seg = np.zeros(new_shape, dtype=seg.dtype)
             for b in range(seg.shape[0]):
                 for c in range(seg.shape[1]):
-                    out_seg[b, c] = resize_segmentation(seg[b, c], new_shape[2:], order, cval)
+                    out_seg[b, c] = resize_segmentation(seg[b, c], new_shape[2:], order)
             output.append(out_seg)
     return output
