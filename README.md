@@ -2,7 +2,8 @@
 I am trying to create an updated TransHRNet dependent on nnUNetv2 and also working with CUDA 12.3(or 12.4), Pytorch 2.3 and cudnn 8.9.x
 This is a work in progress and i will keep updating this on a daily basis 
 
-
+### amspsingh04 on 050724
+I have made all the necessary changes for it to work with the latest nnunetv1 and for it to work with the necessary updates since the last commit to trans HR Net library
 
 
 ## 3D Medical Image Segmentation using Parallel Transformers  
